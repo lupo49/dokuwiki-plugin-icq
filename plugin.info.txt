@@ -1,0 +1,7 @@
+base   icq
+author Jakob Jensen
+email  koeppe [at] kazur [dot] dk
+date   2006-03-28
+name   icq plugin
+desc   With this plugin you can insert an ICQ-user status to your page
+url    https://www.dokuwiki.org/plugin:icq
