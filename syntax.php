@@ -47,7 +47,7 @@ class syntax_plugin_icq extends DokuWiki_Syntax_Plugin {
     /**
      * Handle the match
      */
-    function handle($match, $state, $pos, &$handler){
+    function handle($match, $state, $pos, Doku_Handler $handler){
         $match = substr($match,6,-2);
         return array(strtolower($match));
     }
@@ -55,7 +55,7 @@ class syntax_plugin_icq extends DokuWiki_Syntax_Plugin {
     /**
      * Create output
      */
-    function render($mode, &$renderer, $data) {
+    function render($mode, Doku_Renderer $renderer, $data) {
         if($mode == 'xhtml'){
             $renderer->doc .= '<a href="http://wwp.icq.com/' . $data[0] . '">';
             $renderer->doc .= '<img border="0" alt="Online?" src="http://web.icq.com/whitepages/online?icq=' . $data[0] . '&amp;img=5" />';
